@@ -105,10 +105,14 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+Insert all customers from Old_customers into Customers
+
+Table attributes are CustomerID, Name, Address, Email
 
 ```sql
--- Paste your SQL code below for Question 1
+INSERT INTO Customers
+SELECT CustomerID, Name, Address, Email
+FROM Old_customers;
 ```
 
 **Output:**
