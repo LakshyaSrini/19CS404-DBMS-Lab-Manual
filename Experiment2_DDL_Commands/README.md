@@ -109,6 +109,7 @@ Insert all customers from Old_customers into Customers
 
 Table attributes are CustomerID, Name, Address, Email
 
+# Query
 ```sql
 INSERT INTO Customers
 SELECT CustomerID, Name, Address, Email
@@ -137,99 +138,255 @@ ADD COLUMN Address VARCHAR(100);
 
 **Question 3**
 ---
--- Paste Question 3 here
+Create a table named Invoices with the following constraints:
+InvoiceID as INTEGER should be the primary key.
+InvoiceDate as DATE.
+Amount as REAL should be greater than 0.
+DueDate as DATE should be greater than the InvoiceDate.
+OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
+For example:
+
+Test	
+INSERT INTO Orders (OrderID, OrderDate, CustomerID) VALUES (1, '2024-08-01', 1);
+INSERT INTO Invoices (InvoiceID, InvoiceDate, Amount, DueDate, OrderID) VALUES (1, '2024-08-01', 100.0, '2024-09-01', 1);
+SELECT * FROM Invoices;
+Result
+InvoiceID   InvoiceDate  Amount      DueDate     OrderID
+----------  -----------  ----------  ----------  ----------
+1           2024-08-01   100.0       2024-09-01  1
+
 
 ```sql
--- Paste your SQL code below for Question 3
+CREATE TABLE Invoices(
+InvoiceID INTEGER PRIMARY KEY,
+InvoiceDate DATE,
+Amount REAL CHECK(Amount>0),
+DueDate DATE CHECK(DueDate>InvoiceDate),
+OrderID INTEGER,
+foreign key (OrderID) references  Orders(OrderID));
 ```
 
 **Output:**
 
-![Output3](output.png)
+![Screenshot 2025-04-29 192832](https://github.com/user-attachments/assets/d8a0b1b0-de30-4533-88b6-d7641bf4f62d)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+Create a table named Employees with the following columns:
+
+EmployeeID as INTEGER
+FirstName as TEXT
+LastName as TEXT
+HireDate as DATE
+For example:
+
+Test	
+pragma table_info('Employees');
+Result
+cid   name        type        notnull     dflt_value  pk
+----  ----------  ----------  ----------  ----------  ----------
+0     EmployeeID  INTEGER     0                       0
+1     FirstName   TEXT        0                       0
+2     LastName    TEXT        0                       0
+3     HireDate    DATE        0                       0
 
 ```sql
--- Paste your SQL code below for Question 4
+CREATE TABLE Employees(
+EmployeeID INTEGER,
+FirstName TEXT,
+LastName TEXT,
+HireDate DATE);
 ```
 
 **Output:**
 
-![Output4](output.png)
+![Screenshot 2025-04-29 192951](https://github.com/user-attachments/assets/2770d89d-9963-4c67-865d-be038221ac2c)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+Create a table named Department with the following constraints:
+DepartmentID as INTEGER should be the primary key.
+DepartmentName as TEXT should be unique and not NULL.
+Location as TEXT.
+For example:
+
+Test	
+INSERT INTO Department (DepartmentID, DepartmentName, Location) VALUES (1, 'Human Resources', 'New York');
+select * from Department;
+Result
+DepartmentID  DepartmentName   Location
+------------  ---------------  ----------
+1             Human Resources  New York
 
 ```sql
--- Paste your SQL code below for Question 5
+CREATE TABLE Department(
+DepartmentID INTEGER PRIMARY KEY,
+DepartmentName TEXT UNIQUE NOT NULL,
+Location TEXT);
 ```
 
 **Output:**
 
-![Output5](output.png)
+![Screenshot 2025-04-29 193126](https://github.com/user-attachments/assets/2de29a1a-bca1-4704-a342-7e22c44d8d60)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+Write a SQL query to add birth_date attribute as timestamp (datatype) in the table customer 
+
+Sample table: customer
+
+ customer_id |   cust_name    |    city    | grade | salesman_id 
+-------------+----------------+------------+-------+-------------
+        3002 | Nick Rimando   | New York   |   100 |        5001
+        3007 | Brad Davis     | New York   |   200 |        5001
+        3005 | Graham Zusi    | California |   200 |        5002
+ 
+
+For example:
+
+Test	
+pragma table_info('customer');
+Result
+cid         name         type                               notnull     dflt_value  pk
+----------  -----------  ---------------------------------  ----------  ----------  ----------
+0           customer_id  integer primarykey auto increment  0                       0
+1           cust_name    varchar2(30)                       0                       0
+2           city         varchar(30)                        0                       0
+3           grade        number                             0                       0
+4           salesman_id  number                             0                       0
+5           birth_date   timestamp                          0                       0
 
 ```sql
--- Paste your SQL code below for Question 6
+ALTER TABLE customer
+ADD COLUMN birth_date
+timestamp;
 ```
 
 **Output:**
 
-![Output6](output.png)
+![Screenshot 2025-04-29 193253](https://github.com/user-attachments/assets/bac8c0ad-76d8-4728-bf9d-63160683d440)
 
 **Question 7**
 ---
--- Paste Question 7 here
+In the Student_details table, insert a student record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
+
+RollNo      Name            Gender      Subject      MARKS
+----------  ------------    ----------  ----------   ----------
+205         Olivia Green    F
+207         Liam Smith      M           Mathematics  85
+208         Sophia Johnson  F           Science
+For example:
+
+Test	
+select * from Student_details;
+Result
+RollNo      Name          Gender      Subject     MARKS
+----------  ------------  ----------  ----------  ----------
+205         Olivia Green  F
+207         Liam Smith    M           Mathematic  85
+208         Sophia Johns  F           Science
 
 ```sql
--- Paste your SQL code below for Question 7
+INSERT INTO Student_details(RollNo,Name,Gender,Subject,MARKS)
+VALUES(205,'Olivia Green','F',NULL,NULL);
+INSERT INTO Student_details(RollNo,Name,Gender,Subject,MARKS)
+VALUES(207,'Liam Smith','M','Mathematics',85);
+INSERT INTO Student_details(RollNo,Name,Gender,Subject,MARKS)
+VALUES(208,'Sophia Johnson','F','Science',NULL);
 ```
 
 **Output:**
 
-![Output7](output.png)
+![Screenshot 2025-04-29 193410](https://github.com/user-attachments/assets/452b2f27-0f93-4cbd-9430-e3c307042875)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+Create a table named Bonuses with the following constraints:
+BonusID as INTEGER should be the primary key.
+EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID).
+BonusAmount as REAL should be greater than 0.
+BonusDate as DATE.
+Reason as TEXT should not be NULL.
+For example:
+
+Test	
+INSERT INTO Bonuses (BonusID, EmployeeID, BonusAmount, BonusDate, Reason) VALUES (1, 6, 1000.0, '2024-08-01', 'Outstanding performance');
+SELECT * FROM Bonuses;
+Result
+BonusID     EmployeeID  BonusAmount  BonusDate   Reason
+----------  ----------  -----------  ----------  -----------------------
+1           6           1000.0       2024-08-01  Outstanding performance
 
 ```sql
--- Paste your SQL code below for Question 8
+CREATE TABLE Bonuses(
+BonusID INTEGER PRIMARY KEY,
+EmployeeID INTEGER,
+BonusAmount REAL CHECK(BonusAmount>0),
+BonusDate DATE,
+Reason TEXT NOT NULL,
+foreign key (EmployeeID) references Employees(EmployeeID));
 ```
 
 **Output:**
 
-![Output8](output.png)
+![Screenshot 2025-04-29 193538](https://github.com/user-attachments/assets/d4be315a-dcd6-4014-8dbc-3d61a1cb8342)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+Create a table named Shipments with the following constraints:
+ShipmentID as INTEGER should be the primary key.
+ShipmentDate as DATE.
+SupplierID as INTEGER should be a foreign key referencing Suppliers(SupplierID).
+OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
+For example:
+
+Test	
+INSERT INTO Shipments (ShipmentID, ShipmentDate, SupplierID, OrderID) VALUES (2, '2024-08-03', 99, 1);
+Result
+Error: FOREIGN KEY constraint failed
+
 
 ```sql
--- Paste your SQL code below for Question 9
+CREATE TABLE Shipments(
+ShipmentID INTEGER PRIMARY KEY,
+ShipmentDate DATE,
+SupplierID INTEGER,
+OrderID INTEGER,
+foreign key (SupplierID) references Suppliers(SupplierID),
+foreign key (OrderID) references Orders(OrderID));
 ```
 
 **Output:**
 
-![Output9](output.png)
+![Screenshot 2025-04-29 193651](https://github.com/user-attachments/assets/b76d1407-6b14-404e-b72e-44d419c6b968)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+Insert a book with ISBN 978-1234567890, Title Data Science Essentials, Author Jane Doe, Publisher TechBooks, and Year 2024 into the Books table.
+
+For example:
+
+Test	
+SELECT * FROM Books;
+Result
+ISBN            Title                    Author      Publisher   Year
+--------------  -----------------------  ----------  ----------  ----------
+978-1234567890  Data Science Essentials  Jane Doe    TechBooks   2024
 
 ```sql
--- Paste your SQL code below for Question 10
+INSERT INTO Books(ISBN,Title,Author,Publisher,Year)
+VALUES('978-1234567890','Data Science Essentials','Jane Doe','TechBooks',2024);
 ```
 
 **Output:**
 
-![Output10](output.png)
+![Screenshot 2025-04-29 193752](https://github.com/user-attachments/assets/b49f81cd-8792-417a-85f9-1201b2ac69eb)
 
 
 ## RESULT
