@@ -124,6 +124,7 @@ FROM Old_customers;
 ---
 Write a SQL query to add a new column MobileNumber of type NUMBER and a new column Address of type VARCHAR(100) to the Student_details table.
 
+# Query
 ```sql
 ALTER TABLE Student_details
 ADD COLUMN MobileNumber NUMBER;
@@ -155,7 +156,7 @@ InvoiceID   InvoiceDate  Amount      DueDate     OrderID
 ----------  -----------  ----------  ----------  ----------
 1           2024-08-01   100.0       2024-09-01  1
 
-
+# Query
 ```sql
 CREATE TABLE Invoices(
 InvoiceID INTEGER PRIMARY KEY,
@@ -191,6 +192,8 @@ cid   name        type        notnull     dflt_value  pk
 2     LastName    TEXT        0                       0
 3     HireDate    DATE        0                       0
 
+
+# Query
 ```sql
 CREATE TABLE Employees(
 EmployeeID INTEGER,
@@ -220,6 +223,8 @@ DepartmentID  DepartmentName   Location
 ------------  ---------------  ----------
 1             Human Resources  New York
 
+
+# Query
 ```sql
 CREATE TABLE Department(
 DepartmentID INTEGER PRIMARY KEY,
@@ -259,6 +264,8 @@ cid         name         type                               notnull     dflt_val
 4           salesman_id  number                             0                       0
 5           birth_date   timestamp                          0                       0
 
+
+# Query
 ```sql
 ALTER TABLE customer
 ADD COLUMN birth_date
@@ -289,6 +296,7 @@ RollNo      Name          Gender      Subject     MARKS
 207         Liam Smith    M           Mathematic  85
 208         Sophia Johns  F           Science
 
+# Query
 ```sql
 INSERT INTO Student_details(RollNo,Name,Gender,Subject,MARKS)
 VALUES(205,'Olivia Green','F',NULL,NULL);
@@ -321,6 +329,7 @@ BonusID     EmployeeID  BonusAmount  BonusDate   Reason
 ----------  ----------  -----------  ----------  -----------------------
 1           6           1000.0       2024-08-01  Outstanding performance
 
+# Query
 ```sql
 CREATE TABLE Bonuses(
 BonusID INTEGER PRIMARY KEY,
@@ -350,7 +359,7 @@ INSERT INTO Shipments (ShipmentID, ShipmentDate, SupplierID, OrderID) VALUES (2,
 Result
 Error: FOREIGN KEY constraint failed
 
-
+# Query
 ```sql
 CREATE TABLE Shipments(
 ShipmentID INTEGER PRIMARY KEY,
@@ -379,6 +388,8 @@ ISBN            Title                    Author      Publisher   Year
 --------------  -----------------------  ----------  ----------  ----------
 978-1234567890  Data Science Essentials  Jane Doe    TechBooks   2024
 
+
+# Query
 ```sql
 INSERT INTO Books(ISBN,Title,Author,Publisher,Year)
 VALUES('978-1234567890','Data Science Essentials','Jane Doe','TechBooks',2024);
