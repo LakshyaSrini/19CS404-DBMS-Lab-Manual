@@ -8,6 +8,7 @@ Hospital ER Diagram
 ## ER DIAGRAM:
 ![WhatsApp Image 2025-03-06 at 16 59 45_fea08594](https://github.com/user-attachments/assets/2af6ff0b-07af-45e2-a8dd-4d098165f658)
 
+
 ## ENTITIES AND ATTRIBUTES:
 ~~~
 Patient - Patient_ID (PK), Name, Gender, Date of Birth (DoB), Address, Phone No., Email, Insurance
@@ -35,6 +36,7 @@ Participation: Total (Each appointment must be assigned to a doctor)
 ## Associate (Patient → Medical Records)
 Cardinality: One-to-Many
 Participation: Partial (A patient may or may not have medical records)
+
 
 ## Maintain (Doctor → Medical Records)
 Cardinality: One-to-Many
