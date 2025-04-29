@@ -116,20 +116,24 @@ FROM Old_customers;
 ```
 
 **Output:**
+![Screenshot 2025-04-29 192142](https://github.com/user-attachments/assets/2956cfaa-d3b2-4d37-92c3-87c2d6a478cf)
 
-![Output1](output.png)
 
 **Question 2**
 ---
--- Paste Question 2 here
+Write a SQL query to add a new column MobileNumber of type NUMBER and a new column Address of type VARCHAR(100) to the Student_details table.
 
 ```sql
--- Paste your SQL code below for Question 2
+ALTER TABLE Student_details
+ADD COLUMN MobileNumber NUMBER;
+ALTER TABLE Student_details
+ADD COLUMN Address VARCHAR(100);
+
 ```
 
 **Output:**
+![Screenshot 2025-04-29 192347](https://github.com/user-attachments/assets/a1e3cf10-5c47-42a2-a444-094aa6fabfe2)
 
-![Output2](output.png)
 
 **Question 3**
 ---
