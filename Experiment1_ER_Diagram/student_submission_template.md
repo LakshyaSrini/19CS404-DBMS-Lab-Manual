@@ -2,8 +2,14 @@
 ## NAME - Lakshya S
 ## REGISTER NUMBER - 212223060133
 
-## SCENARIO CHOSEN:
-Hospital ER Diagram
+
+## AIM:
+To analyse the problem and come with the entities in it and identify the constraints in creating the database.
+
+## SCENARIO: 
+Hospital Database
+The Hospital Management System is a tailored operational model for healthcare institutions. Its primary function is to efficiently register, store, and retrieve patient and doctor details, allowing meaningful manipulation of the data.
+
 
 ## ER DIAGRAM:
 ![WhatsApp Image 2025-03-06 at 16 59 45_fea08594](https://github.com/user-attachments/assets/2af6ff0b-07af-45e2-a8dd-4d098165f658)
