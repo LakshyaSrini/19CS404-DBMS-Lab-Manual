@@ -108,6 +108,8 @@ CREATE TABLE Table_Name (
 Insert all customers from Old_customers into Customers
 
 Table attributes are CustomerID, Name, Address, Email
+
+
 ![Screenshot 2025-04-30 131006](https://github.com/user-attachments/assets/a4c9f594-3be4-4c1b-bee8-fa8eb99ff1af)
 
 # Query
@@ -124,6 +126,8 @@ FROM Old_customers;
 **Question 2**
 ---
 Write a SQL query to add a new column MobileNumber of type NUMBER and a new column Address of type VARCHAR(100) to the Student_details table.
+
+
 ![Screenshot 2025-04-30 131046](https://github.com/user-attachments/assets/f49662a7-d529-4ab4-8b37-f94d47a6624c)
 
 # Query
@@ -147,6 +151,8 @@ InvoiceDate as DATE.
 Amount as REAL should be greater than 0.
 DueDate as DATE should be greater than the InvoiceDate.
 OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
+
+
 ![Screenshot 2025-04-30 131138](https://github.com/user-attachments/assets/e3212864-b363-4461-bb3f-29a8c275456f)
 
 
@@ -174,6 +180,8 @@ EmployeeID as INTEGER
 FirstName as TEXT
 LastName as TEXT
 HireDate as DATE
+
+
 ![Screenshot 2025-04-30 131211](https://github.com/user-attachments/assets/b991c8ea-150b-4077-8786-43ca0dc2e6c8)
 
 
