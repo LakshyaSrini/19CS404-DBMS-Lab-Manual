@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/87386e2a-04f6-4197-aa91-ac09351b4f51)# Experiment 5: Subqueries and Views
+# Experiment 5: Subqueries and Views
 
 ## AIM
 To study and implement subqueries and views.
