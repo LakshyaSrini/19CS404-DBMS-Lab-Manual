@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/ec240aa9-503d-427f-8b00-9cc64aa06d03)# Experiment 3: DML Commands
+![image](https://github.com/user-attachments/assets/41df5b97-dd3e-4854-b537-753a73af5cac)![image](https://github.com/user-attachments/assets/399c84dc-75fa-4aab-94da-a41b86a5cfdd)![image](https://github.com/user-attachments/assets/ec240aa9-503d-427f-8b00-9cc64aa06d03)# Experiment 3: DML Commands
 
 ## AIM
 To study and implement DML (Data Manipulation Language) commands.
@@ -164,26 +164,8 @@ FROM Calculations;
 ---
 Write a SQL query to categorize decimal as 'High', 'Medium', or 'Low' based on whether it is greater than 100, between 50 and 100, or less than 50 in the Calculations table
 
-cid         name        type        notnull     dflt_value  pk
+![image](https://github.com/user-attachments/assets/187173e5-8d63-4619-a834-32f98dc2eaf0)
 
-0           id          INTEGER     0                       1
-1           value1      REAL        0                       0
-2           value2      REAL        0                       0
-3           base        INTEGER     0                       0
-4           exponent    INTEGER     0                       0
-5           number      REAL        0                       0
-6           decimal     REAL        0                       0
- 
-
-For example:
-
-Result
-id          decimal     category
-
-1           123.4567    High
-2           567.891     High
-3           78.234      Medium
-4           45.78       Low
 
 # Query
 ```sql
@@ -207,22 +189,11 @@ Write a SQL query to Select all patients who were admitted for one day.
 
 Table: Patients
 
-name                  type
---------------------  ----------
-patient_id            INT
-first_name            VARCHAR(50)
-last_name             VARCHAR(50)
-date_of_birth         DATE
-admission_date        DATE
-discharge_date        DATE
-doctor_id             INT
-For example:
 
-Result
-patient_id  first_name  admission_date  discharge_date
-----------  ----------  --------------  --------------
-4           Abhishek    2023-02-10      2023-02-10
-5           Alice       2023-08-02      2023-08-02
+
+![image](https://github.com/user-attachments/assets/b670ea5a-0179-44c7-9f8b-0f58f02b8608)
+
+
 
 # Query
 ```sql
@@ -240,19 +211,9 @@ WHERE admission_date = discharge_date ;
 ---
 Show the categoryName and description from the categories table sorted by categoryName.
 
-name                     type
 
-CategoryID           INTEGER
-CategoryName     VARCHAR(25)
-Description          VARCHAR(255)
+![image](https://github.com/user-attachments/assets/15ba9091-8a85-4b12-94c1-7e5fbc6b6b16)
 
-For example:
-
-Result
-CategoryName  Description
-
-Beverages     Soft drinks, coffees, teas, beers, and ales
-Fruits        Apple, Grapes, Kiwi
 
 # Query
 ```sql
@@ -279,6 +240,9 @@ WHERE grade <> 3;
 **Output:**
 
 ![Screenshot 2025-04-29 200508](https://github.com/user-attachments/assets/149ff21b-4511-46d5-885b-f77f7e663f6f)
+
+# Screenshot of Module 1 SEB Completion Grades
+![image](https://github.com/user-attachments/assets/1932eecb-faa6-4cb2-83b2-35fb1ff55966)
 
 
 ## RESULT
