@@ -108,6 +108,7 @@ CREATE TABLE Table_Name (
 Insert all customers from Old_customers into Customers
 
 Table attributes are CustomerID, Name, Address, Email
+![Screenshot 2025-04-30 131006](https://github.com/user-attachments/assets/a4c9f594-3be4-4c1b-bee8-fa8eb99ff1af)
 
 # Query
 ```sql
@@ -123,6 +124,7 @@ FROM Old_customers;
 **Question 2**
 ---
 Write a SQL query to add a new column MobileNumber of type NUMBER and a new column Address of type VARCHAR(100) to the Student_details table.
+![Screenshot 2025-04-30 131046](https://github.com/user-attachments/assets/f49662a7-d529-4ab4-8b37-f94d47a6624c)
 
 # Query
 ```sql
@@ -145,16 +147,8 @@ InvoiceDate as DATE.
 Amount as REAL should be greater than 0.
 DueDate as DATE should be greater than the InvoiceDate.
 OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
-For example:
+![Screenshot 2025-04-30 131138](https://github.com/user-attachments/assets/e3212864-b363-4461-bb3f-29a8c275456f)
 
-Test	
-INSERT INTO Orders (OrderID, OrderDate, CustomerID) VALUES (1, '2024-08-01', 1);
-INSERT INTO Invoices (InvoiceID, InvoiceDate, Amount, DueDate, OrderID) VALUES (1, '2024-08-01', 100.0, '2024-09-01', 1);
-SELECT * FROM Invoices;
-Result
-InvoiceID   InvoiceDate  Amount      DueDate     OrderID
-----------  -----------  ----------  ----------  ----------
-1           2024-08-01   100.0       2024-09-01  1
 
 # Query
 ```sql
@@ -180,17 +174,8 @@ EmployeeID as INTEGER
 FirstName as TEXT
 LastName as TEXT
 HireDate as DATE
-For example:
+![Screenshot 2025-04-30 131211](https://github.com/user-attachments/assets/b991c8ea-150b-4077-8786-43ca0dc2e6c8)
 
-Test	
-pragma table_info('Employees');
-Result
-cid   name        type        notnull     dflt_value  pk
-----  ----------  ----------  ----------  ----------  ----------
-0     EmployeeID  INTEGER     0                       0
-1     FirstName   TEXT        0                       0
-2     LastName    TEXT        0                       0
-3     HireDate    DATE        0                       0
 
 
 # Query
@@ -213,15 +198,6 @@ Create a table named Department with the following constraints:
 DepartmentID as INTEGER should be the primary key.
 DepartmentName as TEXT should be unique and not NULL.
 Location as TEXT.
-For example:
-
-Test	
-INSERT INTO Department (DepartmentID, DepartmentName, Location) VALUES (1, 'Human Resources', 'New York');
-select * from Department;
-Result
-DepartmentID  DepartmentName   Location
-------------  ---------------  ----------
-1             Human Resources  New York
 
 
 # Query
@@ -241,28 +217,7 @@ Location TEXT);
 ---
 Write a SQL query to add birth_date attribute as timestamp (datatype) in the table customer 
 
-Sample table: customer
-
- customer_id |   cust_name    |    city    | grade | salesman_id 
--------------+----------------+------------+-------+-------------
-        3002 | Nick Rimando   | New York   |   100 |        5001
-        3007 | Brad Davis     | New York   |   200 |        5001
-        3005 | Graham Zusi    | California |   200 |        5002
- 
-
-For example:
-
-Test	
-pragma table_info('customer');
-Result
-cid         name         type                               notnull     dflt_value  pk
-----------  -----------  ---------------------------------  ----------  ----------  ----------
-0           customer_id  integer primarykey auto increment  0                       0
-1           cust_name    varchar2(30)                       0                       0
-2           city         varchar(30)                        0                       0
-3           grade        number                             0                       0
-4           salesman_id  number                             0                       0
-5           birth_date   timestamp                          0                       0
+![Screenshot 2025-04-30 131321](https://github.com/user-attachments/assets/c4554dc2-8b1b-4584-b153-f8a1ecb56032)
 
 
 # Query
@@ -280,21 +235,8 @@ timestamp;
 ---
 In the Student_details table, insert a student record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
 
-RollNo      Name            Gender      Subject      MARKS
-----------  ------------    ----------  ----------   ----------
-205         Olivia Green    F
-207         Liam Smith      M           Mathematics  85
-208         Sophia Johnson  F           Science
-For example:
+![Screenshot 2025-04-30 131352](https://github.com/user-attachments/assets/636acb2d-7512-4f86-9e68-52a20742a2ba)
 
-Test	
-select * from Student_details;
-Result
-RollNo      Name          Gender      Subject     MARKS
-----------  ------------  ----------  ----------  ----------
-205         Olivia Green  F
-207         Liam Smith    M           Mathematic  85
-208         Sophia Johns  F           Science
 
 # Query
 ```sql
@@ -319,15 +261,6 @@ EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID).
 BonusAmount as REAL should be greater than 0.
 BonusDate as DATE.
 Reason as TEXT should not be NULL.
-For example:
-
-Test	
-INSERT INTO Bonuses (BonusID, EmployeeID, BonusAmount, BonusDate, Reason) VALUES (1, 6, 1000.0, '2024-08-01', 'Outstanding performance');
-SELECT * FROM Bonuses;
-Result
-BonusID     EmployeeID  BonusAmount  BonusDate   Reason
-----------  ----------  -----------  ----------  -----------------------
-1           6           1000.0       2024-08-01  Outstanding performance
 
 # Query
 ```sql
@@ -379,14 +312,6 @@ foreign key (OrderID) references Orders(OrderID));
 ---
 Insert a book with ISBN 978-1234567890, Title Data Science Essentials, Author Jane Doe, Publisher TechBooks, and Year 2024 into the Books table.
 
-For example:
-
-Test	
-SELECT * FROM Books;
-Result
-ISBN            Title                    Author      Publisher   Year
---------------  -----------------------  ----------  ----------  ----------
-978-1234567890  Data Science Essentials  Jane Doe    TechBooks   2024
 
 
 # Query
@@ -398,6 +323,10 @@ VALUES('978-1234567890','Data Science Essentials','Jane Doe','TechBooks',2024);
 **Output:**
 
 ![Screenshot 2025-04-29 193752](https://github.com/user-attachments/assets/b49f81cd-8792-417a-85f9-1201b2ac69eb)
+
+
+# Screenshot of Module 1 SEB Completion Grades
+![Screenshot 2025-04-30 131707](https://github.com/user-attachments/assets/3b19dd95-30bb-4263-a17c-4ec80c9abf95)
 
 
 ## RESULT
