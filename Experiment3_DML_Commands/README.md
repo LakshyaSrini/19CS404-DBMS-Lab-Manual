@@ -1,4 +1,4 @@
-# Experiment 3: DML Commands
+![image](https://github.com/user-attachments/assets/ec240aa9-503d-427f-8b00-9cc64aa06d03)# Experiment 3: DML Commands
 
 ## AIM
 To study and implement DML (Data Manipulation Language) commands.
@@ -49,16 +49,7 @@ SELECT column1, column2 FROM table_name WHERE condition;
 --
 Write a SQL statement to Update the address to '58 Lakeview, Magnolia' where supplier ID is 5 in the suppliers table.
 
-Suppliers Table 
-
-name               type
------------------  ---------------
-supplier_id        INT
-supplier_name      VARCHAR(100)
-contact_person     VARCHAR(100)
-phone_number       VARCHAR(20)
-email              VARCHAR(100)
-address            VARCHAR(250)
+![image](https://github.com/user-attachments/assets/d921da7b-d711-4050-9198-ffe9fdc79f57)
 
 # Query
 ```sql
@@ -76,22 +67,8 @@ WHERE supplier_id = 5;
 ---
 Write a SQL query to Retrieve the department name and location concatenated with a comma
 
-Table name: dept
- 
-name        type
+![image](https://github.com/user-attachments/assets/6a22eeb7-eefc-4f0b-976d-501cef70c427)
 
-deptno       INT
-dname       VARCHAR(100)
-loc         VARCHAR(100)
-For example:
-
-Result
-dept_location
-
-ACCOUNTING, NEW YORK
-RESEARCH, DALLAS
-SALES, CHICAGO
-OPERATIONS, BOSTON
 
 # Query
 ```sql
@@ -108,30 +85,9 @@ FROM dept;
 ---
 Write a SQL query to find the exact date that is 100 days after each employee's hire date.
 
-emp table
 
-cid         name        type        
+![image](https://github.com/user-attachments/assets/6bf854f1-1dde-4bb0-9d77-08ce8a2834e6)
 
-0           empno       INT         
-1           ename       VARCHAR(100)
-2           job         VARCHAR(50)
-3           mgr         INT        
-4           hiredate    DATE        
-5           sal         DECIMAL(10,2)  
-6           comm        DECIMAL(10,2)  
-7           deptno      INT         
-For example:
-
-Result
-ename       hiredate    DateAfter100Days
-
-JONES       1981-04-02  1981-07-11
-MARTIN      1981-09-28  1982-01-06
-BLAKE       1981-05-01  1981-08-09
-CLARK       1981-06-09  1981-09-17
-SCOTT       1982-12-09  1983-03-19
-KING        1981-11-17  1982-02-25
-TURNER      1981-09-08  1981-12-17
 
 # Query
 ```sql
@@ -148,26 +104,9 @@ FROM emp;
 ---
 Write a SQL query to calculate the number of days between the hiredate and a specified date ('2024-12-31') for each employee using the JULIANDAY function from the emp table.
 
-emp table
 
-cid         name        type        
+![image](https://github.com/user-attachments/assets/7789690a-bb06-470e-b2f4-1298db6ac612)
 
-0           empno       INT         
-1           ename       VARCHAR(100)
-2           job         VARCHAR(50)
-3           mgr         INT        
-4           hiredate    DATE        
-5           sal         DECIMAL(10,2)  
-6           comm        DECIMAL(10,2)  
-7           deptno      INT         
-For example:
-
-Result
-ename       hiredate    days_worked
-
-SMITH       2024-06-02  212.0
-ALLEN       2024-07-20  164.0
-WARD        2024-11-02  59.0
 
 # Query
 ```sql
@@ -184,29 +123,8 @@ FROM emp;
 ---
 Write a SQL query to calculate the discounted price for products where the discount percentage is greater than 0, and order the results by discounted_price in ascending order. Return product_id, original_price, discount_percentage, and discounted_price.
 
-Sample table: Products
 
-product_id | original_price | discount_percentage 
-
-------------+----------------+--------------------- 
-
-101 | 50.00 | 0.10 
-
-102 | 75.00 | 0.00 
-
-103 | 100.00 | 0.20
-
- 
-
-For example:
-
-Result
-product_id  original_price  discount_percentage  discounted_price
-----------  --------------  -------------------  ----------------
-101         50.0            0.1                  45.0
-102         75.0            0.15                 63.75
-103         100.0           0.2                  80.0
-
+![image](https://github.com/user-attachments/assets/af9f4a30-383c-4ddf-8313-0c71fffc102b)
 
 # Query
 ```sql
@@ -225,26 +143,10 @@ ORDER BY discounted_price ASC;
 ---
 Write a SQL query to round the decimal column to 3 decimal places from the Calculations table.
 
-cid         name        type        notnull     dflt_value  pk
 
-0           id          INTEGER     0                       1
-1           value1      REAL        0                       0
-2           value2      REAL        0                       0
-3           base        INTEGER     0                       0
-4           exponent    INTEGER     0                       0
-5           number      REAL        0                       0
-6           decimal     REAL        0                       0
- 
+![image](https://github.com/user-attachments/assets/83455bf8-7550-4087-ba96-42df8f9642b1)
 
-For example:
 
-Result
-id          rounded_value
-
-1           123.457
-2           567.891
-3           78.234
-4           45.78
 
 # Query
 ```sql
