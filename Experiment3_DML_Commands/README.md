@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/41df5b97-dd3e-4854-b537-753a73af5cac)![image](https://github.com/user-attachments/assets/399c84dc-75fa-4aab-94da-a41b86a5cfdd)![image](https://github.com/user-attachments/assets/ec240aa9-503d-427f-8b00-9cc64aa06d03)# Experiment 3: DML Commands
+# Experiment 3: DML Commands
 
 ## AIM
 To study and implement DML (Data Manipulation Language) commands.
